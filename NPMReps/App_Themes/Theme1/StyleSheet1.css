@@ -1,0 +1,16 @@
+﻿body {
+    font-family:Calibri;
+    font-size:13px;
+    width: 1540px;
+    margin: 0 auto;
+}
+.head1 {
+    background-color:lightblue;
+}
+.head2 {
+    text-align:left;
+}
+@media print
+{
+.noprint {display:none;}
+}
