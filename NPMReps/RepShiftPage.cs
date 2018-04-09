@@ -25,7 +25,7 @@ namespace NPMReps {
 
         private string PageName { get { return Path.GetFileNameWithoutExtension(Page.AppRelativeVirtualPath); } }
 
-        private string GetLimit(TextBox tb) {
+        private string GetLimit(TextBox tb, DataTable limits) {
             var field = "";
             if (tb.ID.Contains("Lower")) field = "Lo";
             else
@@ -37,7 +37,8 @@ namespace NPMReps {
             var attribute = row.Attributes["AFAttribute"];
             var query = string.Format("[Element Template] = '{0}' AND Asset = '{1}' AND Attribute = '{2}'", template, asset, attribute);
             try {
-                var limitRow = PI.AFLimits.Select(query)[0];
+                //var limitRow = PI.AFLimits.Select(query)[0];
+                var limitRow = limits.Select(query)[0];
                 var value = limitRow.Field<double>(field);
                 return value.ToString();
             }
@@ -51,9 +52,9 @@ namespace NPMReps {
             string pageName = PageName;
             Storage storage = new Storage(pageName);
 
+            PI.Refresh();
             if (IsPostBack) {
                 endT = CalendarPopup1.SelectedDate + TimePicker1.SelectedTime.TimeOfDay;
-
                 //bool bSave = false;
                 //foreach (TextBox tb in TextBoxes)
                 //    if (tb.Enabled) { bSave = true; storage.Set(tb.ID, tb.Text); }
@@ -77,17 +78,30 @@ namespace NPMReps {
                 //    }
                 //    catch { }
                 //}
-                foreach (TextBox tb in TextBoxes) {
-                    try {
-                        string s = null;
-                        if ((s = GetLimit(tb)) == null) {
-                            TableRow r = tb.Parent.Parent as TableRow;
-                            if (tb.ID.Contains("Lower")) s = r.Attributes["LowerInit"];
-                            else s = r.Attributes["UpperInit"];
-                        }
-                        tb.Text = s;
-                    } catch { }
-                }
+                //foreach (TextBox tb in TextBoxes) {
+                //    try {
+                //        string s = null;
+                //        if ((s = GetLimit(tb)) == null) {
+                //            TableRow r = tb.Parent.Parent as TableRow;
+                //            if (tb.ID.Contains("Lower")) s = r.Attributes["LowerInit"];
+                //            else s = r.Attributes["UpperInit"];
+                //        }
+                //        tb.Text = s;
+                //    } catch { }
+                //}
+            }
+
+            DataTable limits = PI.AFLimits;
+            foreach (TextBox tb in TextBoxes) {
+                try {
+                    string s = null;
+                    if ((s = GetLimit(tb, limits)) == null) {
+                        TableRow r = tb.Parent.Parent as TableRow;
+                        if (tb.ID.Contains("Lower")) s = r.Attributes["LowerInit"];
+                        else s = r.Attributes["UpperInit"];
+                    }
+                    tb.Text = s;
+                } catch { }
             }
 
             if (data == null) {

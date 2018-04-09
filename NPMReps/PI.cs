@@ -90,6 +90,8 @@ namespace NPMReps {
         //private static PI _; static PI() { _ = new PI(); }
         private static PISystem af;
         private static PIServer pi;
+        private static AFTable limits;
+
         static PI() {
             af = (new PISystems()).DefaultPISystem;
             pi = (new PIServers()).DefaultPIServer;
@@ -97,6 +99,11 @@ namespace NPMReps {
             //var user = new NetworkCredential(@"NPMPROD\SRV_PI", "PIP@rk35");
             af.Connect(new NetworkCredential(@"NPMPROD\SRV_PI", "PIP@rk35"));
             pi.Connect(new NetworkCredential("pilab", "aafire"));
+            limits = af.Databases["Northparkes_Mines"].Tables["Limits"];
+        }
+
+        internal static void Refresh() {
+            limits.Refresh();
         }
 
         //private PISDK.PISDK _SDK;
@@ -151,12 +158,9 @@ namespace NPMReps {
             return new Point(name);
         }
 
-        private static DataTable afLimits = null;
+        //private static DataTable afLimits = null;
         public static DataTable AFLimits {
-            get {
-                if (afLimits == null) afLimits = af.Databases["Northparkes_Mines"].Tables["Limits"].Table;
-                return afLimits;
-            }
+            get => limits.Table;
         }
     }
 }
