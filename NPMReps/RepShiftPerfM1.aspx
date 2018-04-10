@@ -6,7 +6,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>M1 Reps</title>
     <link href="App_Themes/Theme1/StyleSheet1.css" rel="stylesheet" type="text/css" />
     <script>
         var prevSecs = 0;
@@ -103,7 +103,7 @@
                     <asp:TableCell ID="HeaderCell_10" runat="server" HorizontalAlign="Center" Wrap="False">-10:00</asp:TableCell>
                     <asp:TableCell ID="HeaderCell_11" runat="server" HorizontalAlign="Center" Wrap="False">-11:00</asp:TableCell>
                     <asp:TableCell ID="HeaderCell_12" runat="server" HorizontalAlign="Center" Wrap="False">-12:00</asp:TableCell>
-                    <asp:TableCell ID="HeaderCellComments" runat="server" HorizontalAlign="Center" Wrap="False" Width="400px">Comments</asp:TableCell>
+                    <%--<asp:TableCell ID="HeaderCellComments" runat="server" HorizontalAlign="Center" Wrap="False" Width="400px">Comments</asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow ID="SubtitleGRINDINGRow" runat="server">
                      <asp:TableCell ID="SubtitleGRINDINGCell" CssClass="head2" runat="server" ColumnSpan="100">GRINDING</asp:TableCell>
@@ -141,7 +141,7 @@
                     <asp:TableCell ID="CV06P80Cell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="CV06P80Cell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="CV06P80Cell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="CV06P80Cell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="CV06P80Cell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow ID="SubtitleSAGRow" runat="server">
                     <asp:TableCell ID="SubtitleSAGCell" CssClass="head2" runat="server" ColumnSpan="100">SAG</asp:TableCell>
@@ -179,7 +179,7 @@
                     <asp:TableCell ID="ML01TPHCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="ML01TPHCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="ML01TPHCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="ML01TPHCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="ML01TPHCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow 
                     LowerInit="92" 
@@ -214,7 +214,7 @@
                     <asp:TableCell ID="ML01CurrentCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="ML01CurrentCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="ML01CurrentCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="ML01CurrentCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="ML01CurrentCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow 
                     LowerInit="83" 
@@ -249,7 +249,7 @@
                     <asp:TableCell ID="ML01SoundCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="ML01SoundCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="ML01SoundCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="ML01SoundCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="ML01SoundCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow 
                     LowerInit="72" 
@@ -284,7 +284,7 @@
                     <asp:TableCell ID="ML01DensityCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="ML01DensityCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="ML01DensityCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="ML01DensityCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="ML01DensityCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow ID="SubtitleCY01Row" runat="server">
                     <asp:TableCell ID="SubtitleCY01Cell" CssClass="head2" runat="server" ColumnSpan="100">CY01</asp:TableCell>
@@ -322,7 +322,7 @@
                     <asp:TableCell ID="CY01DensityCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="CY01DensityCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="CY01DensityCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="CY01DensityCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="CY01DensityCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow ID="SubtitleCY02Row" runat="server">
                     <asp:TableCell ID="SubtitleCY02Cell" CssClass="head2" runat="server" ColumnSpan="100">CY02</asp:TableCell>
@@ -360,7 +360,7 @@
                     <asp:TableCell ID="CY02PressureCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="CY02PressureCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="CY02PressureCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="CY02PressureCell_Comments" runat="server"></asp:TableCell>       
+                    <%--<asp:TableCell ID="CY02PressureCell_Comments" runat="server"></asp:TableCell>--%>       
                 </asp:TableRow>
                 <asp:TableRow 
                     LowerInit="65" 
@@ -395,7 +395,7 @@
                     <asp:TableCell ID="CY02DensityCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="CY02DensityCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="CY02DensityCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="CY02DensityCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="CY02DensityCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow ID="SubtitleML02Row" runat="server">
                     <asp:TableCell ID="SubtitleML02Cell" CssClass="head2" runat="server" ColumnSpan="100">ML02</asp:TableCell>
@@ -433,7 +433,7 @@
                     <asp:TableCell ID="ML02PowerCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="ML02PowerCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="ML02PowerCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="ML02PowerCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="ML02PowerCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow ID="Sep1Row" runat="server" Height="10px">
                     <asp:TableCell ColumnSpan="100"></asp:TableCell>
@@ -474,7 +474,7 @@
                     <asp:TableCell ID="FlotFeedP80Cell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FlotFeedP80Cell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FlotFeedP80Cell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="FlotFeedP80Cell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="FlotFeedP80Cell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
 
                 <asp:TableRow ID="SubtitleCY05Row" runat="server">
@@ -513,7 +513,7 @@
                     <asp:TableCell ID="CY05PressureCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="CY05PressureCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="CY05PressureCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="CY05PressureCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="CY05PressureCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow 
                     LowerInit="50" 
@@ -548,7 +548,7 @@
                     <asp:TableCell ID="CY05DensityCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="CY05DensityCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="CY05DensityCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="CY05DensityCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="CY05DensityCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow ID="SubtitleML05Row" runat="server">
                     <asp:TableCell ID="SubtitleML05Cell" CssClass="head2" runat="server" ColumnSpan="100">ML05</asp:TableCell>
@@ -586,7 +586,7 @@
                     <asp:TableCell ID="ML05PowerCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="ML05PowerCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="ML05PowerCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="ML05PowerCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="ML05PowerCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow PrtFmt="000" ID="Sep2Row" runat="server" Height="10px">
                     <asp:TableCell ColumnSpan="100"></asp:TableCell>
@@ -624,7 +624,7 @@
                     <asp:TableCell ID="TK30DensityCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TK30DensityCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TK30DensityCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="TK30DensityCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="TK30DensityCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow ID="SubtitleJamesonsRow" runat="server">
                     <asp:TableCell ID="SubtitleJamesonsCell" CssClass="head2" runat="server" ColumnSpan="100">Jamesons</asp:TableCell>
@@ -662,7 +662,7 @@
                     <asp:TableCell ID="FT13PressureCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT13PressureCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT13PressureCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="FT13PressureCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="FT13PressureCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow ID="Sep3" runat="server" Height="10px">
                     <asp:TableCell ColumnSpan="100"></asp:TableCell>
@@ -703,7 +703,7 @@
                     <asp:TableCell ID="FinalConCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FinalConCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FinalConCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="FinalConCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="FinalConCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow 
                     LowerInit="0.10" 
@@ -738,7 +738,7 @@
                     <asp:TableCell ID="FloatFeedCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FloatFeedCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FloatFeedCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="FloatFeedCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="FloatFeedCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow Visible="false"
                     LowerInit="30" 
@@ -773,7 +773,7 @@
                     <asp:TableCell ID="FlashFloatConCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FlashFloatConCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FlashFloatConCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="FlashFloatConCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="FlashFloatConCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow 
                     LowerInit="0.05" 
@@ -808,7 +808,7 @@
                     <asp:TableCell ID="FinalTailCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FinalTailCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FinalTailCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="FinalTailCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="FinalTailCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow ID="Sep4" runat="server" Height="10px">
                     <asp:TableCell ColumnSpan="100"></asp:TableCell>
@@ -816,7 +816,8 @@
                 <asp:TableRow ID="SubtitleVisioFrothRow" runat="server">
                     <asp:TableCell ID="SubtitleVisioFrothCell" CssClass="head2" runat="server" ColumnSpan="100">Visiofroth Status</asp:TableCell>
                 </asp:TableRow>
-                <asp:TableRow ID="FT40AirRow" PITag="FT40_AIR_CAS_Enabled" runat="server">
+
+                <asp:TableRow ID="FT40AirRow" PITag="FT40_AIR_CAS_Enabled" runat="server" Visible="false">
                     <asp:TableCell ID="FT40AirCellHeader" ColumnSpan="4" runat="server" CssClass="head1">FT40 Air</asp:TableCell>
                     <asp:TableCell ID="FT40AirCell_0" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT40AirCell_1" runat="server">###</asp:TableCell>
@@ -831,9 +832,9 @@
                     <asp:TableCell ID="FT40AirCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT40AirCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT40AirCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="FT40AirCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="FT40AirCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow ID="FT40LevelRow" PITag="FT40_LVL_CAS_Enabled" runat="server">
+                <asp:TableRow ID="FT40LevelRow" PITag="FT40_LVL_CAS_Enabled" runat="server" Visible="false">
                     <asp:TableCell ID="FT40LevelCellHeader" ColumnSpan="4" runat="server" CssClass="head1">FT40 Level</asp:TableCell>
                     <asp:TableCell ID="FT40LevelCell_0" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT40LevelCell_1" runat="server">###</asp:TableCell>
@@ -848,12 +849,12 @@
                     <asp:TableCell ID="FT40LevelCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT40LevelCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT40LevelCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="FT40LevelCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="FT40LevelCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow ID="Sep5" runat="server" Height="10px">
+                <asp:TableRow ID="Sep5" runat="server" Height="10px" Visible="false">
                     <asp:TableCell ColumnSpan="100"></asp:TableCell>
                 </asp:TableRow>
-                <asp:TableRow ID="FT41AirRow" PITag="FT41_AIR_CAS_Enabled" runat="server">
+                <asp:TableRow ID="FT41AirRow" PITag="FT41_AIR_CAS_Enabled" runat="server" Visible="false">
                     <asp:TableCell ID="FT41AirCellHeader" ColumnSpan="4" runat="server" CssClass="head1">FT41 Air</asp:TableCell>
                     <asp:TableCell ID="FT41AirCell_0" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT41AirCell_1" runat="server">###</asp:TableCell>
@@ -868,9 +869,9 @@
                     <asp:TableCell ID="FT41AirCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT41AirCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT41AirCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="FT41AirCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="FT41AirCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow ID="FT41LevelRow" PITag="FT41_LVL_CAS_Enabled" runat="server">
+                <asp:TableRow ID="FT41LevelRow" PITag="FT41_LVL_CAS_Enabled" runat="server" Visible="false">
                     <asp:TableCell ID="FT41LevelCellHeader" ColumnSpan="4" runat="server" CssClass="head1">FT41 Level</asp:TableCell>
                     <asp:TableCell ID="FT41LevelCell_0" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT41LevelCell_1" runat="server">###</asp:TableCell>
@@ -885,11 +886,12 @@
                     <asp:TableCell ID="FT41LevelCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT41LevelCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT41LevelCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="FT41LevelCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="FT41LevelCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow ID="Sep6" runat="server" Height="10px">
+                <asp:TableRow ID="Sep6" runat="server" Height="10px" Visible="false">
                     <asp:TableCell ColumnSpan="100"></asp:TableCell>
                 </asp:TableRow>
+
                 <asp:TableRow ID="FT51AirRow" PITag="FT51_AIR_CAS_Enabled" runat="server">
                     <asp:TableCell ID="FT51AirCellHeader" ColumnSpan="4" runat="server" CssClass="head1">FT51 Air</asp:TableCell>
                     <asp:TableCell ID="FT51AirCell_0" runat="server">###</asp:TableCell>
@@ -905,7 +907,7 @@
                     <asp:TableCell ID="FT51AirCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT51AirCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT51AirCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="FT51AirCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="FT51AirCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow ID="FT51LevelRow" PITag="FT51_LVL_CAS_Enabled" runat="server">
                     <asp:TableCell ID="FT51LevelCellHeader" ColumnSpan="4" runat="server" CssClass="head1">FT51 Level</asp:TableCell>
@@ -922,9 +924,10 @@
                     <asp:TableCell ID="FT51LevelCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT51LevelCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT51LevelCell_12" runat="server">###</asp:TableCell>
-                    <asp:TableCell ID="FT51LevelCell_Comments" runat="server"></asp:TableCell>
+                    <%--<asp:TableCell ID="FT51LevelCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow ID="FootherRow" runat="server">
+
+<%--                <asp:TableRow ID="FootherRow" runat="server">
                     <asp:TableCell ID="TableCell1" runat="server" ColumnSpan="100">Mechanical / Maintenance concerns</asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow ID="TableRow1" runat="server" Height="70px">
@@ -933,6 +936,8 @@
                 <asp:TableRow ID="TableRow2" runat="server" Height="70px">
                     <asp:TableCell ID="TableCell3" runat="server" ColumnSpan="100"></asp:TableCell>
                 </asp:TableRow>
+
+--%>
             </asp:Table>
       </ContentTemplate>
     </asp:UpdatePanel>
