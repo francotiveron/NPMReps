@@ -14,6 +14,9 @@
     <div>
         <asp:HyperLink ID="HyperLink4" target="_blank" runat="server" NavigateUrl="~/RepShiftPerfM2.aspx">2 - Team Leaders Daily Report - Module 2</asp:HyperLink>
     </div>
+    <div>
+        <asp:HyperLink ID="HyperLink2" target="_blank" runat="server" NavigateUrl="~/RepDewatering.aspx">2 - Dewatering Report</asp:HyperLink>
+    </div>
     </form>
 </body>
 </html>

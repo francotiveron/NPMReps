@@ -55,6 +55,7 @@
   <ItemGroup>
     <Content Include="App_Themes\Theme1\StyleSheet1.css" />
     <Content Include="Default.aspx" />
+    <Content Include="RepDewatering.aspx" />
     <Content Include="RepShiftPerfM1.aspx" />
     <Content Include="RepShiftPerfM2.aspx" />
     <Content Include="Web.config" />
@@ -69,6 +70,17 @@
     </Compile>
     <Compile Include="PI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepDewatering.aspx.cs">
+      <DependentUpon>RepDewatering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepDewatering.aspx.designer.cs">
+      <DependentUpon>RepDewatering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepDewateringMXData.cs" />
+    <Compile Include="RepDewateringpage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="RepShiftPage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
