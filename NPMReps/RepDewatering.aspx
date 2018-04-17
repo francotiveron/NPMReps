@@ -651,9 +651,9 @@
                     ID="FL01OTRow"
                     PITag="WT07s"
                     PIFilter="'WT07s'"
-                    AFTemplate="Filter"
-                    AFAsset="360FL001"
-                    AFAttribute="Throughput Rate"
+                    AFTemplate="Conveyor"
+                    AFAsset="370CV015"
+                    AFAttribute="Feed Rate"
                     runat="server"
                     >
                     <asp:TableCell ID="FL01OTCellHeader" runat="server" CssClass="head1">FL01 Throughput Rate</asp:TableCell>
@@ -795,9 +795,9 @@
                     ID="FL02OTRow"
                     PITag="WT08s"
                     PIFilter="'WT08s'"
-                    AFTemplate="Filter"
-                    AFAsset="360FL002"
-                    AFAttribute="Throughput Rate"
+                    AFTemplate="Conveyor"
+                    AFAsset="370CV014"
+                    AFAttribute="Feed Rate"
                     runat="server"
                     >
                     <asp:TableCell ID="FL02OTCellHeader" runat="server" CssClass="head1">FL02 Throughput Rate</asp:TableCell>
