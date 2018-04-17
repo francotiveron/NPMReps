@@ -6,7 +6,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Dewatering</title>
     <link href="App_Themes/Theme1/StyleSheet1.css" rel="stylesheet" type="text/css" />
     <script>
         var prevSecs = 0;
@@ -48,10 +48,13 @@
 <body>
     <form id="form1" runat="server">
     <span style="width:300px" class="noprint">
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+        <%--<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>--%>
         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <a href="javascript:window.print();">Print..</a>
         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <%--USER:--%>&nbsp
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/RepShiftPerfM1.aspx">Module 1</asp:HyperLink>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/RepShiftPerfM2.aspx">Module 2</asp:HyperLink>
     </span>
     <span id="UserDiv"></span>
     <asp:ScriptManager runat="server"></asp:ScriptManager>
@@ -83,7 +86,7 @@
         </table>
             <asp:Table ID="Table" runat="server" Height="20px" CellPadding="2" CellSpacing="0" Width="100%">
                 <asp:TableRow ID="TitleRow" runat="server">
-                    <asp:TableCell ID="TitleCell" runat="server" HorizontalAlign="Center" Wrap="False" ColumnSpan="100">Dewatering Report</asp:TableCell>
+                    <asp:TableCell ID="TitleCell" runat="server" HorizontalAlign="Center" Wrap="False" ColumnSpan="100">Parameter Compliance - Dewatering</asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow ID="HeaderRow" runat="server">
                     <asp:TableCell ID="HeaderCellTime" runat="server" HorizontalAlign="Center" Wrap="False">##/##/## ##:00</asp:TableCell>
@@ -108,7 +111,18 @@
                 <asp:TableRow ID="SubtitleTH01Row" runat="server">
                      <asp:TableCell ID="SubtitleTH01Cell" CssClass="head2" runat="server" ColumnSpan="100">TH01</asp:TableCell>
                </asp:TableRow>
-                <asp:TableRow LowerInit="67" UpperInit="74" PrtFmt="00.0" ID="TH01UFDRow" PITag="DTP89s" PIFilter="'DTP89s'" runat="server">
+                <asp:TableRow 
+                    LowerInit="67" 
+                    UpperInit="74" 
+                    PrtFmt="00.0" 
+                    ID="TH01UFDRow" 
+                    PITag="DTP89s" 
+                    PIFilter="'DTP89s'" 
+                    AFTemplate="Thickener" 
+                    AFAsset="355TH001" 
+                    AFAttribute="Underflow Density" 
+                    runat="server"
+                    >
                     <asp:TableCell ID="TH01UFDCellHeader" runat="server" CssClass="head1">TH01 UF Density</asp:TableCell>
                     <asp:TableCell ID="TH01UFDCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH01UFDCellLower" runat="server">
@@ -132,7 +146,18 @@
                     <asp:TableCell ID="TH01UFDCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH01UFDCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="67" UpperInit="74" PrtFmt="00.0" ID="TH01UFDSPRow" PITag="PLC15_Pd00Stp" PIFilter="'PLC15_Pd00Stp'" runat="server">
+                <asp:TableRow Visible="false"
+                    LowerInit="67" 
+                    UpperInit="74" 
+                    PrtFmt="00.0" 
+                    ID="TH01UFDSPRow" 
+                    PITag="PLC15_Pd00Stp" 
+                    PIFilter="'PLC15_Pd00Stp'" 
+                    runat="server"
+                    AFTemplate="Thickener" 
+                    AFAsset="355TH001" 
+                    AFAttribute="Underflow Density" 
+                    >
                     <asp:TableCell ID="TH01UFDSPHeader" runat="server" CssClass="head1">TH01 UF Density SP</asp:TableCell>
                     <asp:TableCell ID="TH01UFDSPCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH01UFDSPCellLower" runat="server">
@@ -156,7 +181,18 @@
                     <asp:TableCell ID="TH01UFDSPCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH01UFDSPCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="10" UpperInit="30" PrtFmt="00" ID="TH01BMRow" PITag="PTTH1s" PIFilter="'PTTH1S'" runat="server">
+                <asp:TableRow 
+                    LowerInit="10" 
+                    UpperInit="30" 
+                    PrtFmt="00" 
+                    ID="TH01BMRow" 
+                    PITag="PTTH1s" 
+                    PIFilter="'PTTH1S'" 
+                    runat="server"
+                    AFTemplate="Thickener" 
+                    AFAsset="355TH001" 
+                    AFAttribute="Bed Mass" 
+                    >
                     <asp:TableCell ID="TH01BMCellHeader" runat="server" CssClass="head1">TH01 Bed Mass</asp:TableCell>
                     <asp:TableCell ID="TH01BMCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH01BMCellLower" runat="server">
@@ -180,7 +216,18 @@
                     <asp:TableCell ID="TH01BMCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH01BMCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="10" UpperInit="70" PrtFmt="00" ID="TH01BLRow" PITag="LETH1s" PIFilter="'LETH1s'" runat="server">
+                <asp:TableRow 
+                    LowerInit="10" 
+                    UpperInit="70" 
+                    PrtFmt="00" 
+                    ID="TH01BLRow" 
+                    PITag="LETH1s" 
+                    PIFilter="'LETH1s'" 
+                    runat="server"
+                    AFTemplate="Thickener" 
+                    AFAsset="355TH001" 
+                    AFAttribute="Underflow Density" 
+                    >
                     <asp:TableCell ID="TH01BLCellHeader" runat="server" CssClass="head1">TH01 Bed Level</asp:TableCell>
                     <asp:TableCell ID="TH01BLCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH01BLCellLower" runat="server">
@@ -207,7 +254,18 @@
                      <asp:TableRow ID="SubTitleTH04Row" runat="server">
                      <asp:TableCell ID="SubTitleTH04Cell" CssClass="head2" runat="server" ColumnSpan="100">TH04</asp:TableCell>
                </asp:TableRow>
-                <asp:TableRow LowerInit="60" UpperInit="74" PrtFmt="00.0" ID="TH04UFDRow" PITag="DTP56s" PIFilter="'DTP56s'" runat="server">
+                <asp:TableRow 
+                    LowerInit="60" 
+                    UpperInit="74" 
+                    PrtFmt="00.0" 
+                    ID="TH04UFDRow" 
+                    PITag="DTP56s" 
+                    PIFilter="'DTP56s'" 
+                    AFTemplate="Thickener" 
+                    AFAsset="355TH004" 
+                    AFAttribute="Underflow Density" 
+                    runat="server"
+                    >
                     <asp:TableCell ID="TH04UFDCellHeader" runat="server" CssClass="head1">TH04 UF Density</asp:TableCell>
                     <asp:TableCell ID="TH04UFDCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH04UFDCellLower" runat="server">
@@ -231,7 +289,18 @@
                     <asp:TableCell ID="TH04UFDCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH04UFDCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                    <asp:TableRow LowerInit="67" UpperInit="74" PrtFmt="00.0" ID="TH04UFDSPRow" PITag="PLC15_Pd05Stp" PIFilter="'PLC15_Pd05Stp'" runat="server">
+                <asp:TableRow Visible="false"
+                    LowerInit="67"
+                    UpperInit="74"
+                    PrtFmt="00.0"
+                    ID="TH04UFDSPRow"
+                    PITag="PLC15_Pd05Stp"
+                    PIFilter="'PLC15_Pd05Stp'"
+                    AFTemplate="Thickener" 
+                    AFAsset="355TH004" 
+                    AFAttribute="Underflow Density" 
+                    runat="server"
+                    >
                     <asp:TableCell ID="TH04UFDSPHeader" runat="server" CssClass="head1">TH04 UF Density SP</asp:TableCell>
                     <asp:TableCell ID="TH04UFDSPCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH04UFDSPCellLower" runat="server">
@@ -255,7 +324,18 @@
                     <asp:TableCell ID="TH04UFDSPCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH04UFDSPCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="10" UpperInit="30" PrtFmt="00" ID="TH04BMRow" PITag="PTTH4s" PIFilter="'PTTH4s'" runat="server">
+                <asp:TableRow
+                    LowerInit="10"
+                    UpperInit="30"
+                    PrtFmt="00"
+                    ID="TH04BMRow"
+                    PITag="PTTH4s"
+                    PIFilter="'PTTH4s'"
+                    AFTemplate="Thickener" 
+                    AFAsset="355TH004" 
+                    AFAttribute="Bed Mass" 
+                    runat="server"
+                    >
                     <asp:TableCell ID="TH04BMCellHeader" runat="server" CssClass="head1">TH04 Bed Mass</asp:TableCell>
                     <asp:TableCell ID="TH04BMCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH04BMCellLower" runat="server">
@@ -279,7 +359,18 @@
                     <asp:TableCell ID="TH04BMCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH04BMCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="10" UpperInit="70" PrtFmt="00" ID="TH04BLRow" PITag="LETH4s" PIFilter="'LETH4s'" runat="server">
+                <asp:TableRow
+                    LowerInit="10"
+                    UpperInit="70"
+                    PrtFmt="00"
+                    ID="TH04BLRow"
+                    PITag="LETH4s"
+                    PIFilter="'LETH4s'"
+                    AFTemplate="Thickener" 
+                    AFAsset="355TH004" 
+                    AFAttribute="Bed Level" 
+                    runat="server"
+                    >
                     <asp:TableCell ID="TH04BLCellHeader" runat="server" CssClass="head1">TH04 Bed Level</asp:TableCell>
                     <asp:TableCell ID="TH04BLCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH04BLCellLower" runat="server">
@@ -306,7 +397,17 @@
                      <asp:TableRow ID="SubtitleTH02Row" runat="server">
                      <asp:TableCell ID="SubtitleTH02Cell" CssClass="head2" runat="server" ColumnSpan="100">TH02</asp:TableCell>
                </asp:TableRow>
-                <asp:TableRow LowerInit="67" UpperInit="74" PrtFmt="00" ID="TH02UFDRow" PITag="DITTH02s" PIFilter="'DITTH02s'" runat="server">
+                <asp:TableRow
+                    LowerInit="67"
+                    UpperInit="74"
+                    PrtFmt="00"
+                    ID="TH02UFDRow"
+                    PITag="DITTH02s"
+                    PIFilter="'DITTH02s'"
+                    AFTemplate="Thickener"
+                    AFAsset="355TH002"
+                    AFAttribute="Underflow Density"
+                    runat="server">
                     <asp:TableCell ID="TH02UFDCellHeader" runat="server" CssClass="head1">TH02 UF Density</asp:TableCell>
                     <asp:TableCell ID="TH02UFDCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH02UFDCellLower" runat="server">
@@ -330,7 +431,17 @@
                     <asp:TableCell ID="TH02UFDCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH02UFDCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                    <asp:TableRow LowerInit="67" UpperInit="74" PrtFmt="00.0" ID="TH02UFDSPRow" PITag="PLC15_Pd03Stp" PIFilter="'PLC15_Pd03Stp'" runat="server">
+                    <asp:TableRow Visible="false"
+                        LowerInit="67"
+                        UpperInit="74"
+                        PrtFmt="00.0"
+                        ID="TH02UFDSPRow"
+                        PITag="PLC15_Pd03Stp"
+                        PIFilter="'PLC15_Pd03Stp'"
+                        AFTemplate="Thickener"
+                        AFAsset="355TH002"
+                        AFAttribute="Underflow Density"
+                        runat="server">
                     <asp:TableCell ID="TH02UFDSPHeader" runat="server" CssClass="head1">TH02 UF Density SP</asp:TableCell>
                     <asp:TableCell ID="TH02UFDSPCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH02UFDSPCellLower" runat="server">
@@ -354,7 +465,18 @@
                     <asp:TableCell ID="TH02UFDSPCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH02UFDSPCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="10" UpperInit="30" PrtFmt="00" ID="TH02BMRow" PITag="PTTH2s" PIFilter="'PTTH2s'" runat="server">
+                <asp:TableRow
+                    LowerInit="10"
+                    UpperInit="30"
+                    PrtFmt="00"
+                    ID="TH02BMRow"
+                    PITag="PTTH2s"
+                    PIFilter="'PTTH2s'"
+                    AFTemplate="Thickener"
+                    AFAsset="355TH002"
+                    AFAttribute="Bed Mass"
+                    runat="server"
+                    >
                     <asp:TableCell ID="TH02BMCellHeader" runat="server" CssClass="head1">TH02 Bed Mass</asp:TableCell>
                     <asp:TableCell ID="TH02BMCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH02BMCellLower" runat="server">
@@ -378,7 +500,18 @@
                     <asp:TableCell ID="TH02BMCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH02BMCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="10" UpperInit="70" PrtFmt="00" ID="TH02BLRow" PITag="LETH2s" PIFilter="'LETH2s'" runat="server">
+                <asp:TableRow
+                    LowerInit="10"
+                    UpperInit="70"
+                    PrtFmt="00"
+                    ID="TH02BLRow"
+                    PITag="LETH2s"
+                    PIFilter="'LETH2s'"
+                    AFTemplate="Thickener"
+                    AFAsset="355TH002"
+                    AFAttribute="Bed Level"
+                    runat="server"
+                    >
                     <asp:TableCell ID="TH02BLCellHeader" runat="server" CssClass="head1">TH02 Bed Level</asp:TableCell>
                     <asp:TableCell ID="TH02BLCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH02BLCellLower" runat="server">
@@ -406,7 +539,18 @@
                 <asp:TableRow ID="SubtitleFL01Row" runat="server">
                     <asp:TableCell ID="SubtitleFL01Cell" CssClass="head2" runat="server" ColumnSpan="100">FL01</asp:TableCell>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="8" UpperInit="10.5" PrtFmt="00.0" ID="FL01MRow" PITag="Assay_Moisture_FL01" PIFilter="'Assay_Moisture_FL01'" runat="server">
+                <asp:TableRow
+                    LowerInit="8"
+                    UpperInit="10.5"
+                    PrtFmt="00.0"
+                    ID="FL01MRow"
+                    PITag="Assay_Moisture_FL01"
+                    PIFilter="'Assay_Moisture_FL01'"
+                    AFTemplate="Filtration Analysis"
+                    AFAsset="Filtration"
+                    AFAttribute="Moisture"
+                    runat="server"
+                    >
                     <asp:TableCell ID="FL01MCellHeader" runat="server" CssClass="head1">FL01 Moisture</asp:TableCell>
                     <asp:TableCell ID="FL01MCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FL01MCellLower" runat="server">
@@ -430,7 +574,18 @@
                     <asp:TableCell ID="FL01MCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="FL01MCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="60" UpperInit="100" PrtFmt="000" ID="FL01DSRow" PITag="FL01_DRUM_SPD" PIFilter="'FL01_DRUM_SPD'" runat="server">
+                <asp:TableRow
+                    LowerInit="60"
+                    UpperInit="100"
+                    PrtFmt="000"
+                    ID="FL01DSRow"
+                    PITag="FL01_DRUM_SPD"
+                    PIFilter="'FL01_DRUM_SPD'"
+                    AFTemplate="Filter"
+                    AFAsset="360FL001"
+                    AFAttribute="Drum Speed"
+                    runat="server"
+                    >
                     <asp:TableCell ID="FL01DSCellHeader" runat="server" CssClass="head1">FL01 Drum Speed</asp:TableCell>
                     <asp:TableCell ID="FL01DSCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FL01DSCellLower" runat="server">
@@ -454,7 +609,18 @@
                     <asp:TableCell ID="FL01DSCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="FL01DSCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="50" UpperInit="80" PrtFmt="00" ID="FL01BLRow" PITag="LTFL1s" PIFilter="'LTFL1s'" runat="server">
+                <asp:TableRow
+                    LowerInit="50"
+                    UpperInit="80"
+                    PrtFmt="00"
+                    ID="FL01BLRow"
+                    PITag="LTFL1s"
+                    PIFilter="'LTFL1s'"
+                    AFTemplate="Filter"
+                    AFAsset="360FL001"
+                    AFAttribute="Bath Level"
+                    runat="server"
+                    >
                     <asp:TableCell ID="FL01BLCellHeader" runat="server" CssClass="head1">FL01 Bath Level</asp:TableCell>
                     <asp:TableCell ID="FL01BLCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FL01BLCellLower" runat="server">
@@ -478,8 +644,19 @@
                     <asp:TableCell ID="FL01BLCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="FL01BLCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="10" UpperInit="12" PrtFmt="00" ID="FL01OTRow" PITag="WT07s" PIFilter="'WT07s'" runat="server">
-                    <asp:TableCell ID="FL01OTCellHeader" runat="server" CssClass="head1">FL01 Operating Time</asp:TableCell>
+                <asp:TableRow
+                    LowerInit="10"
+                    UpperInit="12"
+                    PrtFmt="00"
+                    ID="FL01OTRow"
+                    PITag="WT07s"
+                    PIFilter="'WT07s'"
+                    AFTemplate="Filter"
+                    AFAsset="360FL001"
+                    AFAttribute="Throughput Rate"
+                    runat="server"
+                    >
+                    <asp:TableCell ID="FL01OTCellHeader" runat="server" CssClass="head1">FL01 Throughput Rate</asp:TableCell>
                     <asp:TableCell ID="FL01OTCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FL01OTCellLower" runat="server">
                         <asp:TextBox Enabled="False" ID="FL01OTCellLowerTextBox" runat="server">###</asp:TextBox>
@@ -505,7 +682,18 @@
                 <asp:TableRow ID="SubtitleFL02Row" runat="server">
                     <asp:TableCell ID="SubtitleFL02Cell" CssClass="head2" runat="server" ColumnSpan="100">FL02</asp:TableCell>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="8" UpperInit="10" PrtFmt="00.0" ID="FL02MRow" PITag="Assay_Moisture_FL02" PIFilter="'Assay_Moisture_FL02'" runat="server">
+                <asp:TableRow
+                    LowerInit="8"
+                    UpperInit="10"
+                    PrtFmt="00.0"
+                    ID="FL02MRow"
+                    PITag="Assay_Moisture_FL02"
+                    PIFilter="'Assay_Moisture_FL02'"
+                    AFTemplate="Filtration Analysis"
+                    AFAsset="Filtration"
+                    AFAttribute="Moisture"
+                    runat="server"
+                    >
                     <asp:TableCell ID="FL02MCellHeader" runat="server" CssClass="head1">FL02 Moisture</asp:TableCell>
                     <asp:TableCell ID="FL02MCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FL02MCellLower" runat="server">
@@ -530,7 +718,18 @@
                     <%--<asp:TableCell ID="FL02MCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
 
-                <asp:TableRow LowerInit="60" UpperInit="100" PrtFmt="000" ID="FL02DSRow" PITag="FL02_DRUM_SPD" PIFilter="'FL02_DRUM_SPD'" runat="server">
+                <asp:TableRow
+                    LowerInit="60"
+                    UpperInit="100"
+                    PrtFmt="000"
+                    ID="FL02DSRow"
+                    PITag="FL02_DRUM_SPD"
+                    PIFilter="'FL02_DRUM_SPD'"
+                    AFTemplate="Filter"
+                    AFAsset="360FL002"
+                    AFAttribute="Drum Speed"
+                    runat="server"
+                    >
                     <asp:TableCell ID="FL02DSCellHeader" runat="server" CssClass="head1">FL02 Drum Speed</asp:TableCell>
                     <asp:TableCell ID="FL02DSCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FL02DSCellLower" runat="server">
@@ -554,7 +753,18 @@
                     <asp:TableCell ID="FL02DSCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="FL02DSCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="50" UpperInit="80" PrtFmt="00" ID="FL02BLRow" PITag="LTFL2s" PIFilter="'LTFL2s'" runat="server">
+                <asp:TableRow
+                    LowerInit="50"
+                    UpperInit="80"
+                    PrtFmt="00"
+                    ID="FL02BLRow"
+                    PITag="LTFL2s"
+                    PIFilter="'LTFL2s'"
+                    AFTemplate="Filter"
+                    AFAsset="360FL002"
+                    AFAttribute="Bath Level"
+                    runat="server"
+                    >
                     <asp:TableCell ID="FL02BLCellHeader" runat="server" CssClass="head1">FL02 Bath Level</asp:TableCell>
                     <asp:TableCell ID="FL02BLCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FL02BLCellLower" runat="server">
@@ -578,8 +788,19 @@
                     <asp:TableCell ID="FL02BLCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="FL02BLCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="10" UpperInit="12" PrtFmt="00" ID="FL02OTRow" PITag="WT08s" PIFilter="'WT08s'" runat="server">
-                    <asp:TableCell ID="FL02OTCellHeader" runat="server" CssClass="head1">FL02 Operating Time</asp:TableCell>
+                <asp:TableRow
+                    LowerInit="10"
+                    UpperInit="12"
+                    PrtFmt="00"
+                    ID="FL02OTRow"
+                    PITag="WT08s"
+                    PIFilter="'WT08s'"
+                    AFTemplate="Filter"
+                    AFAsset="360FL002"
+                    AFAttribute="Throughput Rate"
+                    runat="server"
+                    >
+                    <asp:TableCell ID="FL02OTCellHeader" runat="server" CssClass="head1">FL02 Throughput Rate</asp:TableCell>
                     <asp:TableCell ID="FL02OTCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FL02OTCellLower" runat="server">
                         <asp:TextBox Enabled="False" ID="FL02OTCellLowerTextBox" runat="server">###</asp:TextBox>
@@ -605,7 +826,18 @@
                     <asp:TableRow ID="SubtitleTH03Row" runat="server">
                     <asp:TableCell ID="SubtitleTH03Cell" CssClass="head2" runat="server" ColumnSpan="100">TH03</asp:TableCell>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="55" UpperInit="65" PrtFmt="00" ID="TH03WLDRow" PITag="DTP29s" PIFilter="'DTP29s'" runat="server">
+                <asp:TableRow 
+                    LowerInit="55"
+                    UpperInit="65"
+                    PrtFmt="00"
+                    ID="TH03WLDRow"
+                    PITag="DTP29s"
+                    PIFilter="'DTP29s'"
+                    AFTemplate="Tailings Line"
+                    AFAsset="Western Line"
+                    AFAttribute="Density"
+                    runat="server"
+                    >
                     <asp:TableCell ID="TH03WLDCellHeader" runat="server" CssClass="head1">West Line Density</asp:TableCell>
                     <asp:TableCell ID="TH03WLDCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH03WLDCellLower" runat="server">
@@ -629,7 +861,17 @@
                     <asp:TableCell ID="TH03WLDCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH03WLDCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow LowerInit="55" UpperInit="65" PrtFmt="00" ID="TH03ELDRow" PITag="DTP33s" PIFilter="'DTP33s'" runat="server">
+                <asp:TableRow 
+                    LowerInit="55"
+                    UpperInit="65"
+                    PrtFmt="00"
+                    ID="TH03ELDRow"
+                    PITag="DTP33s"
+                    PIFilter="'DTP33s'"
+                    AFAsset="Eastern Line"
+                    AFAttribute="Density"
+                    runat="server"
+                    >
                     <asp:TableCell ID="TH03ELDCellHeader" runat="server" CssClass="head1">East Line Density</asp:TableCell>
                     <asp:TableCell ID="TH03ELDCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH03ELDCellLower" runat="server">
@@ -653,7 +895,18 @@
                     <asp:TableCell ID="TH03ELDCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TableCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                    <asp:TableRow LowerInit="5" UpperInit="25" PrtFmt="00" ID="TH03TRow" PITag="WTTH3s" PIFilter="'WTTH3s'" runat="server">
+                <asp:TableRow
+                    LowerInit="5"
+                    UpperInit="25"
+                    PrtFmt="00"
+                    ID="TH03TRow"
+                    PITag="WTTH3s"
+                    PIFilter="'WTTH3s'"
+                    AFTemplate="Thickener"
+                    AFAsset="355TH003"
+                    AFAttribute="Rake Torque"
+                    runat="server"
+                    >
                     <asp:TableCell ID="TH03TCellHeader" runat="server" CssClass="head1">TH03 Torque</asp:TableCell>
                     <asp:TableCell ID="TH03TCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH03TCellLower" runat="server">
@@ -677,7 +930,18 @@
                     <asp:TableCell ID="TH03TCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH03TCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                    <asp:TableRow LowerInit="20" UpperInit="80" PrtFmt="00" ID="TH03BLRow" PITag="PTTH3s" PIFilter="'PTTH3s'" runat="server">
+                <asp:TableRow
+                    LowerInit="20"
+                    UpperInit="80"
+                    PrtFmt="00"
+                    ID="TH03BLRow"
+                    PITag="PTTH3s"
+                    PIFilter="'PTTH3s'"
+                    AFTemplate="Thickener"
+                    AFAsset="355TH003"
+                    AFAttribute="Bed Level"
+                    runat="server"
+                    >
                     <asp:TableCell ID="TH03BLCellHeader" runat="server" CssClass="head1">TH03 Bed Level</asp:TableCell>
                     <asp:TableCell ID="TH03BLCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH03BLCellLower" runat="server">
@@ -701,7 +965,18 @@
                     <asp:TableCell ID="TH03BLCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH03BLCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                    <asp:TableRow LowerInit="5" UpperInit="25" PrtFmt="00" ID="TH03BMRow" PITag="LETH3s" PIFilter="'LETH3s'" runat="server">
+                <asp:TableRow
+                    LowerInit="5"
+                    UpperInit="25"
+                    PrtFmt="00"
+                    ID="TH03BMRow"
+                    PITag="LETH3s"
+                    PIFilter="'LETH3s'"
+                    AFTemplate="Thickener"
+                    AFAsset="355TH003"
+                    AFAttribute="Bed Mass"
+                    runat="server"
+                    >
                     <asp:TableCell ID="TH03BMCellHeader" runat="server" CssClass="head1">TH03 Bed Mass</asp:TableCell>
                     <asp:TableCell ID="TH03BMCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH03BMCellLower" runat="server">

@@ -6,7 +6,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>M2 Reps</title>
+    <title>Module 2</title>
     <link href="App_Themes/Theme1/StyleSheet1.css" rel="stylesheet" type="text/css" />
     <script>
         var prevSecs = 0;
@@ -48,10 +48,13 @@
 <body>
     <form id="form1" runat="server">
     <span style="width:300px" class="noprint">
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+        <%--<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>--%>
         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <a href="javascript:window.print();">Print..</a>
         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <%--USER:--%>&nbsp
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/RepShiftPerfM1.aspx">Module 1</asp:HyperLink>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/RepDewatering.aspx">Dewatering</asp:HyperLink>
     </span>
     <span id="UserDiv"></span>
     <asp:ScriptManager runat="server"></asp:ScriptManager>
@@ -83,7 +86,7 @@
         </table>
             <asp:Table ID="Table" runat="server" Height="20px" CellPadding="2" CellSpacing="0" Width="100%">
                 <asp:TableRow ID="TitleRow" runat="server">
-                    <asp:TableCell ID="TitleCell" runat="server" HorizontalAlign="Center" Wrap="False" ColumnSpan="100">Team Leaders Daily Report - Module 2</asp:TableCell>
+                    <asp:TableCell ID="TitleCell" runat="server" HorizontalAlign="Center" Wrap="False" ColumnSpan="100">Parameter Compliance - Module 2</asp:TableCell>
                 </asp:TableRow>
                 <asp:TableRow ID="HeaderRow" runat="server">
                     <asp:TableCell ID="HeaderCellTime" runat="server" HorizontalAlign="Center" Wrap="False">##/##/## ##:00</asp:TableCell>

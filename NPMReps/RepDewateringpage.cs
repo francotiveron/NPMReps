@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -18,45 +19,78 @@ namespace NPMReps {
         private static readonly Color m_OKFColor = Color.Black;
         private static readonly Color m_KOFColor = Color.White;
         private static readonly Color m_ErrColor = Color.Yellow;
-        private static readonly string[] m_UsersEnabled = {
-            @"npm\franco.tiveron", @"npm\william.harry", @"npm\thomas.trott", @"npm\wade.freeman"
-        };
+        //private static readonly string[] m_UsersEnabled = {
+        //    @"npm\franco.tiveron", @"npm\william.harry", @"npm\thomas.trott", @"npm\wade.freeman"
+        //};
 
         private string PageName { get { return Path.GetFileNameWithoutExtension(Page.AppRelativeVirtualPath); } }
+
+        private string GetLimit(TextBox tb, DataTable limits) {
+            var field = "";
+            if (tb.ID.Contains("Lower")) field = "Lo";
+            else
+            if (tb.ID.Contains("Upper")) field = "Hi";
+            else return null;
+            var row = (TableRow)tb.Parent.Parent;
+            var template = row.Attributes["AFTemplate"];
+            var asset = row.Attributes["AFAsset"];
+            var attribute = row.Attributes["AFAttribute"];
+            var query = string.Format("[Element Template] = '{0}' AND Asset = '{1}' AND Attribute = '{2}'", template, asset, attribute);
+            try {
+                //var limitRow = PI.AFLimits.Select(query)[0];
+                var limitRow = limits.Select(query)[0];
+                var value = limitRow.Field<double>(field);
+                return value.ToString();
+            } catch { return null; }
+        }
 
         protected void Page_Load(object sender, EventArgs e) {
             RepDewateringMXData data = null;
             DateTime endT = DateTime.Now;
-            string user = UserName.Value;
+            //string user = UserName.Value;
             string pageName = PageName;
             Storage storage = new Storage(pageName);
 
+            PI.Refresh();
             if (IsPostBack) {
                 endT = CalendarPopup1.SelectedDate + TimePicker1.SelectedTime.TimeOfDay;
 
-                bool bSave = false;
-                foreach (TextBox tb in TextBoxes)
-                    if (tb.Enabled) { bSave = true; storage.Set(tb.ID, tb.Text); }
-                if (bSave) storage.Save();
+                //bool bSave = false;
+                //foreach (TextBox tb in TextBoxes)
+                //    if (tb.Enabled) { bSave = true; storage.Set(tb.ID, tb.Text); }
+                //if (bSave) storage.Save();
 
-                if (m_UsersEnabled.Contains(user)) foreach (TextBox tb in TextBoxes) tb.Enabled = true;
+                //if (m_UsersEnabled.Contains(user)) foreach (TextBox tb in TextBoxes) tb.Enabled = true;
                 if (Session[pageName] != null) data = Session[pageName] as RepDewateringMXData;
             }
             else {
                 //CalendarPopup1.SelectedDate = DateTime.Today;
                 TimePicker1.SelectedTime = endT.AddHours(-1);
-                foreach (TextBox tb in TextBoxes) {
-                    try {
-                        string s = null;
-                        if ((s = storage.Get(tb.ID)) == null) {
-                            TableRow r = tb.Parent.Parent as TableRow;
-                            if (tb.ID.Contains("Lower")) s = r.Attributes["LowerInit"];
-                            else s = r.Attributes["UpperInit"];
-                        }
-                        tb.Text = s;
+                //foreach (TextBox tb in TextBoxes) {
+                //    try {
+                //        string s = null;
+                //        if ((s = storage.Get(tb.ID)) == null) {
+                //            TableRow r = tb.Parent.Parent as TableRow;
+                //            if (tb.ID.Contains("Lower")) s = r.Attributes["LowerInit"];
+                //            else s = r.Attributes["UpperInit"];
+                //        }
+                //        tb.Text = s;
+                //    }
+                //    catch { }
+                //}
+            }
+
+            DataTable limits = PI.AFLimits;
+            foreach (TextBox tb in TextBoxes) {
+                try {
+                    string s = null;
+                    if ((s = GetLimit(tb, limits)) == null) {
+                        TableRow r = tb.Parent.Parent as TableRow;
+                        if (tb.ID.Contains("Lower")) s = r.Attributes["LowerInit"];
+                        else s = r.Attributes["UpperInit"];
                     }
-                    catch { }
-                }
+                    tb.Text = s;
+                } catch { }
             }
 
             if (data == null) {
