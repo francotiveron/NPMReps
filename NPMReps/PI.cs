@@ -148,9 +148,10 @@ namespace NPMReps {
         //}
 
         private static PIPoint GetPoint(string name) {
+            int trials = 5;
             while (true) {
                 try { return PIPoint.FindPIPoint(pi, name); }
-                catch { Thread.Sleep(1000); }
+                catch { if (trials > 0) Thread.Sleep(trials-- * 1000); else throw;  }
             }
         }
 

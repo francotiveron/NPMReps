@@ -260,8 +260,8 @@
                     UpperInit="85" 
                     PrtFmt="00.0" 
                     ID="ML03DensityRow" 
-                    PITag="Module2.ML03.Feed_Density" 
-                    PIFilter="'Module2.ML03.Feed_Density'>50" 
+                    PITag="330ML003.Feed Density" 
+                    PIFilter="'330ML003.Feed Density'>50" 
                     AFTemplate="SAG Mill" 
                     AFAsset="330ML003" 
                     AFAttribute="Feed Density" 
@@ -779,7 +779,7 @@
                 <asp:TableRow ID="SubtitleConstraintControlRow" runat="server">
                     <asp:TableCell ID="SubtitleConstraintControlCell" CssClass="head2" runat="server" ColumnSpan="100">Constraint Control</asp:TableCell>
                 </asp:TableRow>
-                <asp:TableRow ID="SCCRow" PITag="SCC_Enabled" runat="server">
+                <asp:TableRow ID="SCCRow" PITag="330HLC004.Controller Enabled" runat="server">
                     <asp:TableCell ID="SCCCellHeader" ColumnSpan="4" runat="server" CssClass="head1">SCC</asp:TableCell>
                     <asp:TableCell ID="SCCCell_0" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="SCCCell_1" runat="server">###</asp:TableCell>
@@ -796,7 +796,7 @@
                     <asp:TableCell ID="SCCCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="SCCCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow ID="TCCRow" PITag="PD14_Tert_Con_Ctrl" runat="server">
+                <asp:TableRow ID="TCCRow" PITag="340HLC006.Controller Enabled" runat="server">
                     <asp:TableCell ID="TCCCellHeader" ColumnSpan="4" runat="server" CssClass="head1">TCC</asp:TableCell>
                     <asp:TableCell ID="TCCCell_0" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TCCCell_1" runat="server">###</asp:TableCell>
@@ -813,7 +813,7 @@
                     <asp:TableCell ID="TCCCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TCCCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow ID="FCCRow" PITag="PD11_Flot_Con_Ctrl" runat="server">
+                <asp:TableRow ID="FCCRow" PITag="340HLC008.Controller Enabled" runat="server">
                     <asp:TableCell ID="FCCCellHeader" ColumnSpan="4" runat="server" CssClass="head1">FCC</asp:TableCell>
                     <asp:TableCell ID="FCCCell_0" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FCCCell_1" runat="server">###</asp:TableCell>

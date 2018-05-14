@@ -24,8 +24,9 @@
     <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="eWorld.UI">
-      <HintPath>..\packages\eWorld\eWorld.UI.dll</HintPath>
+    <Reference Include="eWorld.UI, Version=2.0.6.2393, Culture=neutral, PublicKeyToken=24d65337282035f2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\eWorld.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="OSIsoft.AF.UI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6238be57836698e6, processorArchitecture=MSIL">
@@ -55,6 +56,7 @@
   <ItemGroup>
     <Content Include="App_Themes\Theme1\StyleSheet1.css" />
     <Content Include="Default.aspx" />
+    <Content Include="eWorld.UI.dll" />
     <Content Include="RepDewatering.aspx" />
     <Content Include="RepShiftPerfM1.aspx" />
     <Content Include="RepShiftPerfM2.aspx" />
