@@ -820,7 +820,7 @@
                     <asp:TableCell ID="SubtitleVisioFrothCell" CssClass="head2" runat="server" ColumnSpan="100">Visiofroth Status</asp:TableCell>
                 </asp:TableRow>
 
-                <asp:TableRow ID="FT40AirRow" PITag="FT40_AIR_CAS_Enabled" runat="server" Visible="false">
+<%--                <asp:TableRow ID="FT40AirRow" PITag="FT40_AIR_CAS_Enabled" runat="server" Visible="false">
                     <asp:TableCell ID="FT40AirCellHeader" ColumnSpan="4" runat="server" CssClass="head1">FT40 Air</asp:TableCell>
                     <asp:TableCell ID="FT40AirCell_0" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT40AirCell_1" runat="server">###</asp:TableCell>
@@ -835,7 +835,6 @@
                     <asp:TableCell ID="FT40AirCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT40AirCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT40AirCell_12" runat="server">###</asp:TableCell>
-                    <%--<asp:TableCell ID="FT40AirCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow ID="FT40LevelRow" PITag="FT40_LVL_CAS_Enabled" runat="server" Visible="false">
                     <asp:TableCell ID="FT40LevelCellHeader" ColumnSpan="4" runat="server" CssClass="head1">FT40 Level</asp:TableCell>
@@ -852,7 +851,6 @@
                     <asp:TableCell ID="FT40LevelCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT40LevelCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT40LevelCell_12" runat="server">###</asp:TableCell>
-                    <%--<asp:TableCell ID="FT40LevelCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow ID="Sep5" runat="server" Height="10px" Visible="false">
                     <asp:TableCell ColumnSpan="100"></asp:TableCell>
@@ -872,7 +870,6 @@
                     <asp:TableCell ID="FT41AirCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT41AirCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT41AirCell_12" runat="server">###</asp:TableCell>
-                    <%--<asp:TableCell ID="FT41AirCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow ID="FT41LevelRow" PITag="FT41_LVL_CAS_Enabled" runat="server" Visible="false">
                     <asp:TableCell ID="FT41LevelCellHeader" ColumnSpan="4" runat="server" CssClass="head1">FT41 Level</asp:TableCell>
@@ -889,11 +886,10 @@
                     <asp:TableCell ID="FT41LevelCell_10" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT41LevelCell_11" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="FT41LevelCell_12" runat="server">###</asp:TableCell>
-                    <%--<asp:TableCell ID="FT41LevelCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow ID="Sep6" runat="server" Height="10px" Visible="false">
                     <asp:TableCell ColumnSpan="100"></asp:TableCell>
-                </asp:TableRow>
+                </asp:TableRow>--%>
 
                 <asp:TableRow ID="FT51AirRow" PITag="FT51_AIR_CAS_Enabled" runat="server">
                     <asp:TableCell ID="FT51AirCellHeader" ColumnSpan="4" runat="server" CssClass="head1">FT51 Air</asp:TableCell>
