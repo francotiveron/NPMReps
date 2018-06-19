@@ -602,7 +602,7 @@
                     PITag="DTK30s" 
                     PIFilter="'WWT02s'>100" 
                     runat="server"
-                    AFTemplate="Tank" 
+                    AFTemplate="Flotation Feed Tank" 
                     AFAsset="340TK030" 
                     AFAttribute="Density" 
                     >

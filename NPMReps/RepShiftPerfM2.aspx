@@ -564,7 +564,7 @@
                     ID="TK36DensityRow" 
                     PITag="DTT36s" 
                     PIFilter="'WTWT5s'>100" 
-                    AFTemplate="Tank" 
+                    AFTemplate="Flotation Feed Tank" 
                     AFAsset="340TK036" 
                     AFAttribute="Density" 
                     runat="server"
