@@ -118,7 +118,7 @@
                     ID="TH01UFDRow" 
                     PITag="DTP89s" 
                     PIFilter="'DTP89s'" 
-                    AFTemplate="Thickener" 
+                    AFTemplate="Concentrate Thickener" 
                     AFAsset="355TH001" 
                     AFAttribute="Underflow Density" 
                     runat="server"
@@ -189,7 +189,7 @@
                     PITag="PTTH1s" 
                     PIFilter="'PTTH1S'" 
                     runat="server"
-                    AFTemplate="Thickener" 
+                    AFTemplate="Concentrate Thickener" 
                     AFAsset="355TH001" 
                     AFAttribute="Bed Mass" 
                     >
@@ -224,7 +224,7 @@
                     PITag="LETH1s" 
                     PIFilter="'LETH1s'" 
                     runat="server"
-                    AFTemplate="Thickener" 
+                    AFTemplate="Concentrate Thickener" 
                     AFAsset="355TH001" 
                     AFAttribute="Underflow Density" 
                     >
@@ -261,7 +261,7 @@
                     ID="TH04UFDRow" 
                     PITag="DTP56s" 
                     PIFilter="'DTP56s'" 
-                    AFTemplate="Thickener" 
+                    AFTemplate="Concentrate Thickener" 
                     AFAsset="355TH004" 
                     AFAttribute="Underflow Density" 
                     runat="server"
@@ -331,7 +331,7 @@
                     ID="TH04BMRow"
                     PITag="PTTH4s"
                     PIFilter="'PTTH4s'"
-                    AFTemplate="Thickener" 
+                    AFTemplate="Concentrate Thickener" 
                     AFAsset="355TH004" 
                     AFAttribute="Bed Mass" 
                     runat="server"
@@ -366,7 +366,7 @@
                     ID="TH04BLRow"
                     PITag="LETH4s"
                     PIFilter="'LETH4s'"
-                    AFTemplate="Thickener" 
+                    AFTemplate="Concentrate Thickener" 
                     AFAsset="355TH004" 
                     AFAttribute="Bed Level" 
                     runat="server"
@@ -404,7 +404,7 @@
                     ID="TH02UFDRow"
                     PITag="DITTH02s"
                     PIFilter="'DITTH02s'"
-                    AFTemplate="Thickener"
+                    AFTemplate="Concentrate Thickener"
                     AFAsset="355TH002"
                     AFAttribute="Underflow Density"
                     runat="server">
@@ -438,7 +438,7 @@
                         ID="TH02UFDSPRow"
                         PITag="PLC15_Pd03Stp"
                         PIFilter="'PLC15_Pd03Stp'"
-                        AFTemplate="Thickener"
+                        AFTemplate="Concentrate Thickener"
                         AFAsset="355TH002"
                         AFAttribute="Underflow Density"
                         runat="server">
@@ -472,7 +472,7 @@
                     ID="TH02BMRow"
                     PITag="PTTH2s"
                     PIFilter="'PTTH2s'"
-                    AFTemplate="Thickener"
+                    AFTemplate="Concentrate Thickener"
                     AFAsset="355TH002"
                     AFAttribute="Bed Mass"
                     runat="server"
@@ -507,7 +507,7 @@
                     ID="TH02BLRow"
                     PITag="LETH2s"
                     PIFilter="'LETH2s'"
-                    AFTemplate="Thickener"
+                    AFTemplate="Concentrate Thickener"
                     AFAsset="355TH002"
                     AFAttribute="Bed Level"
                     runat="server"
@@ -539,7 +539,7 @@
                 <asp:TableRow ID="SubtitleFL01Row" runat="server">
                     <asp:TableCell ID="SubtitleFL01Cell" CssClass="head2" runat="server" ColumnSpan="100">FL01</asp:TableCell>
                 </asp:TableRow>
-                <asp:TableRow
+                <asp:TableRow Visible="false"
                     LowerInit="8"
                     UpperInit="10.5"
                     PrtFmt="00.0"
@@ -682,7 +682,7 @@
                 <asp:TableRow ID="SubtitleFL02Row" runat="server">
                     <asp:TableCell ID="SubtitleFL02Cell" CssClass="head2" runat="server" ColumnSpan="100">FL02</asp:TableCell>
                 </asp:TableRow>
-                <asp:TableRow
+                <asp:TableRow Visible="false"
                     LowerInit="8"
                     UpperInit="10"
                     PrtFmt="00.0"
@@ -902,7 +902,7 @@
                     ID="TH03TRow"
                     PITag="WTTH3s"
                     PIFilter="'WTTH3s'"
-                    AFTemplate="Thickener"
+                    AFTemplate="Tails Thickener"
                     AFAsset="355TH003"
                     AFAttribute="Rake Torque"
                     runat="server"
@@ -937,7 +937,7 @@
                     ID="TH03BLRow"
                     PITag="PTTH3s"
                     PIFilter="'PTTH3s'"
-                    AFTemplate="Thickener"
+                    AFTemplate="Tails Thickener"
                     AFAsset="355TH003"
                     AFAttribute="Bed Level"
                     runat="server"
@@ -972,7 +972,7 @@
                     ID="TH03BMRow"
                     PITag="LETH3s"
                     PIFilter="'LETH3s'"
-                    AFTemplate="Thickener"
+                    AFTemplate="Tails Thickener"
                     AFAsset="355TH003"
                     AFAttribute="Bed Mass"
                     runat="server"
