@@ -216,7 +216,7 @@
                     <asp:TableCell ID="TH01BMCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH01BMCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow 
+                <asp:TableRow Visible="false"
                     LowerInit="10" 
                     UpperInit="70" 
                     PrtFmt="00" 
@@ -359,7 +359,7 @@
                     <asp:TableCell ID="TH04BMCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH04BMCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow
+                <asp:TableRow Visible="false"
                     LowerInit="10"
                     UpperInit="70"
                     PrtFmt="00"
@@ -500,7 +500,7 @@
                     <asp:TableCell ID="TH02BMCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH02BMCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
-                <asp:TableRow
+                <asp:TableRow Visible="false"
                     LowerInit="10"
                     UpperInit="70"
                     PrtFmt="00"
@@ -939,10 +939,10 @@
                     PIFilter="'PTTH3s'"
                     AFTemplate="Tails Thickener"
                     AFAsset="355TH003"
-                    AFAttribute="Bed Level"
+                    AFAttribute="Bed Mass"
                     runat="server"
                     >
-                    <asp:TableCell ID="TH03BLCellHeader" runat="server" CssClass="head1">TH03 Bed Level</asp:TableCell>
+                    <asp:TableCell ID="TH03BLCellHeader" runat="server" CssClass="head1">TH03 Bed Mass</asp:TableCell>
                     <asp:TableCell ID="TH03BLCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH03BLCellLower" runat="server">
                         <asp:TextBox Enabled="False" ID="TH03BLCellLowerTextBox" runat="server">###</asp:TextBox>
@@ -974,10 +974,10 @@
                     PIFilter="'LETH3s'"
                     AFTemplate="Tails Thickener"
                     AFAsset="355TH003"
-                    AFAttribute="Bed Mass"
+                    AFAttribute="Bed Level"
                     runat="server"
                     >
-                    <asp:TableCell ID="TH03BMCellHeader" runat="server" CssClass="head1">TH03 Bed Mass</asp:TableCell>
+                    <asp:TableCell ID="TH03BMCellHeader" runat="server" CssClass="head1">TH03 Bed Level</asp:TableCell>
                     <asp:TableCell ID="TH03BMCellShiftAVG" runat="server">###</asp:TableCell>
                     <asp:TableCell ID="TH03BMCellLower" runat="server">
                         <asp:TextBox Enabled="False" ID="TH03BMCellLowerTextBox" runat="server">###</asp:TextBox>
