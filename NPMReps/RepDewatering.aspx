@@ -181,6 +181,42 @@
                     <asp:TableCell ID="TH01UFDSPCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH01UFDSPCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
+                <asp:TableRow
+                    LowerInit="5"
+                    UpperInit="25"
+                    PrtFmt="00"
+                    ID="TH01TRow"
+                    PITag="WTTH1s"
+                    PIFilter="'WTTH1s'"
+                    AFTemplate="Concentrate Thickener"
+                    AFAsset="355TH001"
+                    AFAttribute="Rake Torque"
+                    runat="server"
+                    >
+                    <asp:TableCell ID="TH01TCellHeader" runat="server" CssClass="head1">TH01 Torque</asp:TableCell>
+                    <asp:TableCell ID="TH01TCellShiftAVG" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH01TCellLower" runat="server">
+                        <asp:TextBox Enabled="False" ID="TH01TCellLowerTextBox" runat="server">###</asp:TextBox>
+                    </asp:TableCell>
+                    <asp:TableCell ID="TH01TCellUpper" runat="server">
+                        <asp:TextBox Enabled="False" ID="TH01TCellUpperTextBox" runat="server">###</asp:TextBox>
+                    </asp:TableCell>
+                    <asp:TableCell ID="TH01TCell_0" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH01TCell_1" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH01TCell_2" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH01TCell_3" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH01TCell_4" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH01TCell_5" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH01TCell_6" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH01TCell_7" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH01TCell_8" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH01TCell_9" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH01TCell_10" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH01TCell_11" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH01TCell_12" runat="server">###</asp:TableCell>
+                    <%--<asp:TableCell ID="TH03TCell_Comments" runat="server"></asp:TableCell>--%>
+                </asp:TableRow>
+ 
                 <asp:TableRow 
                     LowerInit="10" 
                     UpperInit="30" 
@@ -325,6 +361,42 @@
                     <%--<asp:TableCell ID="TH04UFDSPCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
                 <asp:TableRow
+                    LowerInit="5"
+                    UpperInit="25"
+                    PrtFmt="00"
+                    ID="TH04TRow"
+                    PITag="WTTH4s"
+                    PIFilter="'WTTH4s'"
+                    AFTemplate="Concentrate Thickener"
+                    AFAsset="355TH004"
+                    AFAttribute="Rake Torque"
+                    runat="server"
+                    >
+                    <asp:TableCell ID="TH04TCellHeader" runat="server" CssClass="head1">TH04 Torque</asp:TableCell>
+                    <asp:TableCell ID="TH04TCellShiftAVG" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH04TCellLower" runat="server">
+                        <asp:TextBox Enabled="False" ID="TH04TCellLowerTextBox" runat="server">###</asp:TextBox>
+                    </asp:TableCell>
+                    <asp:TableCell ID="TH04TCellUpper" runat="server">
+                        <asp:TextBox Enabled="False" ID="TH04TCellUpperTextBox" runat="server">###</asp:TextBox>
+                    </asp:TableCell>
+                    <asp:TableCell ID="TH04TCell_0" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH04TCell_1" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH04TCell_2" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH04TCell_3" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH04TCell_4" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH04TCell_5" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH04TCell_6" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH04TCell_7" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH04TCell_8" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH04TCell_9" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH04TCell_10" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH04TCell_11" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH04TCell_12" runat="server">###</asp:TableCell>
+                    <%--<asp:TableCell ID="TH03TCell_Comments" runat="server"></asp:TableCell>--%>
+                </asp:TableRow>
+
+                <asp:TableRow
                     LowerInit="10"
                     UpperInit="30"
                     PrtFmt="00"
@@ -465,6 +537,42 @@
                     <asp:TableCell ID="TH02UFDSPCell_12" runat="server">###</asp:TableCell>
                     <%--<asp:TableCell ID="TH02UFDSPCell_Comments" runat="server"></asp:TableCell>--%>
                 </asp:TableRow>
+                <asp:TableRow
+                    LowerInit="5"
+                    UpperInit="25"
+                    PrtFmt="00"
+                    ID="TH02TRow"
+                    PITag="WTTH2s"
+                    PIFilter="'WTTH2s'"
+                    AFTemplate="Concentrate Thickener"
+                    AFAsset="355TH002"
+                    AFAttribute="Rake Torque"
+                    runat="server"
+                    >
+                    <asp:TableCell ID="TH02TCellHeader" runat="server" CssClass="head1">TH02 Torque</asp:TableCell>
+                    <asp:TableCell ID="TH02TCellShiftAVG" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH02TCellLower" runat="server">
+                        <asp:TextBox Enabled="False" ID="TH02TCellLowerTextBox" runat="server">###</asp:TextBox>
+                    </asp:TableCell>
+                    <asp:TableCell ID="TH02TCellUpper" runat="server">
+                        <asp:TextBox Enabled="False" ID="TH02TCellUpperTextBox" runat="server">###</asp:TextBox>
+                    </asp:TableCell>
+                    <asp:TableCell ID="TH02TCell_0" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH02TCell_1" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH02TCell_2" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH02TCell_3" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH02TCell_4" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH02TCell_5" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH02TCell_6" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH02TCell_7" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH02TCell_8" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH02TCell_9" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH02TCell_10" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH02TCell_11" runat="server">###</asp:TableCell>
+                    <asp:TableCell ID="TH02TCell_12" runat="server">###</asp:TableCell>
+                    <%--<asp:TableCell ID="TH03TCell_Comments" runat="server"></asp:TableCell>--%>
+                </asp:TableRow>
+
                 <asp:TableRow
                     LowerInit="10"
                     UpperInit="30"
