@@ -414,9 +414,9 @@
                     ID="FlotFeedP80Row" 
                     PITag="PSIMod2P80" 
                     PIFilter="'PSIMod1P80'>1" 
-                    AFTemplate="Cyclone Cluster" 
-                    AFAsset="340CY006" 
-                    AFAttribute="Overflow P80" 
+                    AFTemplate="Particle Size Analyser" 
+                    AFAsset="340AN005M2" 
+                    AFAttribute="Flotation Feed P80" 
                     runat="server"
                     >
                     <asp:TableCell ID="FlotFeedP80CellHeader" runat="server">Feed P80</asp:TableCell>
