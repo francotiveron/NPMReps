@@ -644,7 +644,7 @@
                     PITag="OSA_M2_FC_CU_PI" 
                     PIFilter="'OSA_M2_FC_CU_PI'>1" 
                     AFTemplate="On Stream Analyser" 
-                    AFAsset="340AN004M2FC" 
+                    AFAsset="340FT027.Concentrate" 
                     AFAttribute="Copper" 
                     runat="server"
                     >
@@ -680,7 +680,7 @@
                     PIFilter="'OSA_M2_FF_CU_PI'>0.1" 
                     runat="server"
                     AFTemplate="On Stream Analyser" 
-                    AFAsset="340AN004M2FF" 
+                    AFAsset="340FT050.Tail" 
                     AFAttribute="Copper" 
                     >
                     <asp:TableCell ID="FloatFeedCellHeader" runat="server">Float Feed %</asp:TableCell>
@@ -749,7 +749,7 @@
                     PITag="OSA_M2_FT_CU_MX3_PI" 
                     PIFilter="'OSA_M2_FT_CU_MX3_PI'>0.01" 
                     AFTemplate="On Stream Analyser" 
-                    AFAsset="340AN004M2FT" 
+                    AFAsset="Flotation.Tail" 
                     AFAttribute="Copper" 
                     runat="server"
                     >

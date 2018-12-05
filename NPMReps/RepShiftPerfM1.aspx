@@ -681,7 +681,7 @@
                     PITag="OSA_M1_FC_CU_PI" 
                     PIFilter="'OSA_M1_FC_CU_PI'>1" 
                     AFTemplate="On Stream Analyser" 
-                    AFAsset="340AN004M1FC" 
+                    AFAsset="340FT013.Concentrate" 
                     AFAttribute="Copper" 
                     runat="server"
                     >
@@ -716,7 +716,7 @@
                     PITag="OSA_M1_FF_CU_PI" 
                     PIFilter="'OSA_M1_FF_CU_PI'>0.1" 
                     AFTemplate="On Stream Analyser" 
-                    AFAsset="340AN004M1FF" 
+                    AFAsset="340FT051.Tail" 
                     AFAttribute="Copper" 
                     runat="server"
                     >
@@ -786,7 +786,7 @@
                     PITag="OSA_M1_FT_CU_MX3_PI" 
                     PIFilter="'OSA_M1_FT_CU_MX3_PI'>0.01"  
                     AFTemplate="On Stream Analyser" 
-                    AFAsset="340AN004M1FT" 
+                    AFAsset="Flotation.Tail" 
                     AFAttribute="Copper" 
                     runat="server"
                     >
