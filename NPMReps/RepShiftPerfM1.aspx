@@ -452,8 +452,8 @@
                     PITag="PSIMod1P80" 
                     PIFilter="'PSIMod1P80'>1" 
                     AFTemplate="Particle Size Analyser" 
-                    AFAsset="340AN005M1" 
-                    AFAttribute="Flotation Feed P80" 
+                    AFAsset="M1FF" 
+                    AFAttribute="P80" 
                     runat="server"
                     >
                     <asp:TableCell ID="FlotFeedP80CellHeader" runat="server">Feed P80</asp:TableCell>
